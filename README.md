@@ -16,4 +16,8 @@ influx_port = 8086
 influx_user = myuser
 influx_pass = mypass
 influx_db = mydb
+
+#MQTT parser
+mqtt_server = localhost
+mqtt_port = 1883
 ```
