@@ -40,7 +40,7 @@ def on_message(mqttc, obj, msg):
 
 mqttc = mqtt.Client()
 mqttc.on_message = on_message
-mqttc.connect("localhost", 1883, 60)
+mqttc.connect(config['DEFAULT']['mqtt_server'], config['DEFAULT']['mqtt_port'], 60)
 mqttc.subscribe("zigbee2mqtt/#", 0)
 
 mqttc.loop_forever()
