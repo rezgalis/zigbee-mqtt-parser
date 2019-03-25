@@ -3,6 +3,5 @@
 
 import subprocess
 
-subprocess.Popen(['pkill', '-f', 'zigbee-mqtt-listener.py'], close_fds=True)
-subprocess.Popen(['python', '/home/pi/zigbee-mqtt-parser/zigbee-mqtt-listener.py'], close_fds=True)
-
+subprocess.call(['pkill', '-f', 'zigbee-mqtt-listener.py'])
+subprocess.call('python /home/pi/zigbee-mqtt-parser/zigbee-mqtt-listener.py&', shell=True)
