@@ -1,3 +1,8 @@
 #!/usr/bin/python3
 
-#just a dummy file - placeholder for post-update script - useful if using https://github.com/rezgalis/gitPyUpdater
+#for post-update script - useful if using https://github.com/rezgalis/gitPyUpdater
+
+from subprocess import Popen, PIPE
+
+args = ["pkill" , "-f", "zigbee-mqtt-listener.py"]
+proc = Popen(args, stdout=PIPE, stderr=PIPE)
