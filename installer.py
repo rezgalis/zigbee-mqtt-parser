@@ -6,3 +6,6 @@ from subprocess import Popen, PIPE
 
 args = ["pkill" , "-f", "zigbee-mqtt-listener.py"]
 proc = Popen(args, stdout=PIPE, stderr=PIPE)
+
+args = ["python" , "zigbee-mqtt-listener.py"]
+proc = Popen(args, stdout=PIPE, stderr=PIPE)
