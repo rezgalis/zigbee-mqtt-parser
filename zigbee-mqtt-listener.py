@@ -14,7 +14,7 @@ config.read(basepath + 'default.config')
 
 topics_to_influx = {"temp":datetime.now(), "smoke1": datetime.now(), "smoke2": datetime.now()} #in zigbee2mqtt/ channel
 
-client = InfluxDBClient(config['DEFAULT']['influx_host'], config['DEFAULT']['influx_port'], config['DEFAULT']['influx_user'], config['DEFAULT']['influx_pass'], config['DEFAULT']['influx_db'])
+client = InfluxDBClient(config.get('DEFAULT','influx_host'), config.get('DEFAULT','influx_port'), config.get('DEFAULT','influx_user'), config.get('DEFAULT','influx_pass'), config.get('DEFAULT','influx_db'))
 
 
 def is_update_time(sensor):
